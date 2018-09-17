@@ -1,0 +1,292 @@
+/* Establecemos un tamaño de fuente completo y sin márgenes para
+    que el contenido de la página se vea bien en todos los navegadores*/
+body {
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Con este id encapsulamos el contenido de la página de modo que podamos definir el tamaño total de esta haciendo
+    que se escale de forma completa al aplicar zoom o cambiar el tamaño de la ventana*/
+#pagina {
+    width: 1300px;
+    height: auto;
+    position: relative;
+    margin:0 auto;
+}
+
+/* Para escalar las imágenes si el tamaño del navegador cambia*/
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* La zona de cabecera estará alineada a la izquierda con un espacio de un 3% a su alrededor*/
+header {
+    float: left;
+    width: 100%;
+    /* Utilizamos el % para que el margen se establezca en relación con el tamaño de la página*/
+    padding: 3%;
+}
+
+/* El nombre del museo estará en azul, alineado en el centro, con fuente Lucida console o en su defecto serif, si el navegador
+    no dispusiera de la primera fuente, y en negrita*/
+h1 {
+    color: midnightblue;
+    text-align: center;
+    font-family: "Lucida console", serif;
+    /* Utilizamos el % para que el texto se escale según el tamaño de la pantalla*/
+    font-size: 300%;
+    font-weight: bold;
+}
+
+/* Colocación del logotipo (al lado del nombre del museo), orientado a la izquierda y con un 15% de anchura*/
+.logotipo {
+    margin-top: -13%;
+    margin-bottom: -5%;
+    margin-right: auto;
+    float: left;
+    width: 15%;
+}
+
+/* El menú navegable tendrá un color de fondo en una tonalidad azul, un espacio de 5px alrededor de él,
+    los bordes redondeados y un determinado margen para separarlo de la parte superior*/
+nav {
+    /* Si el contenido ocupa mayor longitud de la que se le ha asociado se recorta esa parte sobrante y no se muestra*/
+    overflow: hidden;
+    background-color: darkcyan;
+    width: 100%;
+    padding: 5px;
+    border-radius: 15px;
+    margin-top: 5%;
+}
+
+/* Las opciones del menú navegable estarán alineadas a la izquierda, con color de fuente blanco
+    alineadas al centro, con un espacio a su alrededor y un tamaño de fuente grande*/
+nav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    /* Le quitamos el subrayado del enlace*/
+    text-decoration: none;
+    /* Utilizamos el % para que el tamaño de la letra se corresponda con el tamaño que tenga la página*/
+    font-size: 110%;
+}
+
+/* Con estos atributos conseguimos que la opción por la que se sitúe el ratón encima se le cambie el color de
+    fondo a violeta, el color de fuente a blanco y se ponga en negrita*/
+/* Para que no resalte el menú por completo y solo los enlaces debemos establecer estos atributos solo a los enlaces*/
+nav a:hover {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+}
+
+/* Zona principal que contendrá la rejilla compuesta por las obras. Está alineada a la derecha, ocupando
+    un 70% de ancho de la página y con unos márgenes dinámicos a derecha y al fondo.*/
+.bloque_obras {
+    display: grid;
+    /* Creamos la rejilla con tres columnas con tamaños iguales y automáticos*/
+    grid-template-columns: auto auto auto;
+    /* Separamos las columnas entre ellas para dar mayor espacio entre las imágenes*/
+    grid-column-gap: 20px;
+    /* Separamos las filas*/
+    grid-row-gap: 20px;
+    float: right;
+    width: 70%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+
+/*Resalta la obra cada vez que el ratón se posiciona encima de ella. Para ello se le cambia el color de fondo
+    y se le redondea el propio resaltado*/
+.obras:hover {
+    background-color: lightskyblue;
+    border-radius: 15px;
+}
+
+/* Las imágenes de las obras se mostrarán con una anchura completa, una altura automática, alineadas a la izquierda
+    y con un margen al fondo determinado*/
+.obras img{
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-bottom: 5%;
+}
+
+/* Para un mejor diseño le quitamos el subrayado a los enlaces de los pies de foto de todas las obras*/
+.obras a {
+    text-decoration: none;
+}
+
+/* Los pies de foto de las obras estarán alineados al centro, con color de fuente negro y en negrita,
+    con un ancho y un tamaño al 100% y determinado margen inferior*/
+.pie_foto {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 100%;
+    margin-bottom: 10%;
+    width: 100%;
+}
+
+/* Zona auxiliar: los enlaces estarán alineados a la izquierda ocupando solo un 20% del tamaño de la página. Estarán
+    encapsulados en un borde redondeado que los separe de la sección principal, con un color de fondo azul claro y un
+    margen inferior para separarlos del pie de página*/
+.enlaces {
+    float: left;
+    width: 20%;
+    border: 3px solid #286af0;
+    background-color: lightblue;
+    
+    /* Establecemos la longitud de esta zona de una manera dinámica utilizando el %*/
+    padding-bottom: 37%;
+    border-radius: 15px;
+    margin-bottom: 2%;
+}
+
+/* Los enlaces de la zona auxiliar tendrá un espaciado alrededor de ellos del 10%, estarán alineados a la izquierda,
+    con color de fuente negro y con el texto también alineado a la izquierda*/
+.enlaces a{
+    /* Espacio entre elementos*/
+    padding: 10%;
+    float: left;
+    color: black;
+    /* Le quitamos el subrayado del enlace*/
+    text-decoration: none;
+    text-align: left;
+}
+
+/* Cuando el ratón se pose encima de uno de los enlaces de la zona auxiliar, cambiará de color de fondo y de fuente,
+    y la letra se pondrá en negrita*/
+.enlaces a:hover {
+    background-color: wheat;
+    color: blue;
+    font-weight: bold;
+}
+
+/* El pie de página tendrá un color de fondo azul verdoso y la letra en blanco, un tamaño de fuente del 100%,
+    los bordes redondeados y su anchura también será del 100%*/
+footer {
+    /* Ancho del pie de página*/
+    padding: 1%;
+    /* Para conseguir establecerlo al fondo de la página hacemos que no haya elementos a ninguno de sus lados*/
+    clear: both;
+    background: darkcyan;
+    text-align: center;
+    color: white;
+    font-size: 100%;
+    border-radius: 15px;
+    width: 100%;
+}
+
+/* ESTILO PARA LOS HTML DE LAS OBRAS */
+
+/* Zona donde se almacena tanto la descripción de la obra como la imagen, estando alineada a la derecha, 
+con un ancho del 48%, y margen a la derecha para separar el texto del menú lateral y un ligero margen
+en la zona inferior, para que no se acerque demasiado al pie de página.
+*/
+.Contenido{
+    float: right;
+    width: 48%;
+    margin-right: 28%;
+    margin-bottom: 2%;
+}
+
+/* Imagen de la obra, alineada a la derecha y con un ancho del 70%. Dejando un ligero margen hacia arriba y a la derecha,
+para separarlo del texto. Tambíen añadimos un poco de espacio a esta por la misma razón.
+*/
+.img_obra{
+    float: right;
+    width: 70%;
+    margin-top: 50px;
+    margin-right: -55%;
+    padding: 3%;
+}
+
+/* Imágenes de las redes sociales, alineadas a la derecha, con unas dimensiones fijas de 30x30 pixeles, un margen superior 
+y un espacio de 20px.
+*/
+.social img{
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin-top: -5%;
+    padding: 20px;
+}
+
+/**************** PRACTICA 2 *******************/
+/* Colocamos el botón que despliega el panel de comentarios a la derecha, con color de fuente blanco
+    y en negrita, el color de fondo en azul claro, con un espaciado de 10 px, un margen a derecha e izquierda
+    para mantenerlo en el mismo sitio al hacer zoom en la página y un margen al fondo para separarlo del pie de página
+    o del panel de comentarios (si está desplegado)*/
+button {
+    float: right;
+    color: white;
+    font-weight: bold;
+    background: lightskyblue;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    padding: 10px;
+    font-size: 100%;
+}
+
+/* El panel de comentarios está situado a la derecha, con las esquinas redondeadas y color de fondo
+    azul claro, con un espaciado a derecha e izquierda para que separe de los campos del formulario
+    y de los comentarios. También tiene margen a derecha e izquierda para que al aplicar zoom en la página
+    no cambie de sitio, un margen superior para separarlo del botón de "Comentarios" y un margen inferior
+    para separarlo del pie de página*/
+#panelComentarios {
+    
+    /* Inicialmente el panel de comentarios no está visible*/
+    display: none;
+    float: right;
+    border-radius: 15px;
+    background-color: lightcyan;
+    padding-left: 30px;
+    padding-right: 90px;
+    margin-right: -30%;
+    margin-bottom: 5%;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+/* Cada comentario se mostrará en un bloque distinto, con un espaciado de 5px, con Georgia como
+    fuente y un ancho de 250px*/
+.comentario {
+    display: block;
+    padding: 5px;
+    font-family: "Georgia";
+    
+    /* Permite cortar palabras que superen el tamaño del panel de comentarios
+        Esto es útil para mantener los datos introducidos en el formulario dentro del panel de comentarios
+        si estos contienen muchos caracteres.*/
+    word-wrap: break-word;
+    width: 250px;
+}
+
+/* Los campos del formulario se mostrarán con un ancho del 100%, un espaciado de 8px y
+    con un borde en aguamarina con sus esquinas redondeadas.*/
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid lightseagreen;
+    border-radius: 4px;
+}
+
+/* El campo del formulario en el que se redactará el comentario se mostrará al 100%
+    de su anchura, con un altura de 150 px para hacer este campo más grande que el resto.
+    Con un espaciado de 10 px permite colocar el cursor para comenzar a escribir un poco
+    más a la derecha y algo más abajo. También le hemos incluido un borde en aguamarina
+    redondeando las esquinas.*/
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: 1px solid lightseagreen;
+    border-radius: 4px;
+}
