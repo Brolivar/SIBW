@@ -1,0 +1,136 @@
+
+/* Fichero css adicional, contiene los mismos elementos que el original, pero omitimos aquellos que no deseamos mostrar
+en la impresión usando display:none dentro de dicho elemento */
+
+/* Tamaño de fuente predeterminado para que se vea bien en todos los navegadores*/
+body {
+    font-size: 100%;
+    margin-left: 50px;
+}
+
+/* Para escalar las imágenes si el tamaño del navegador cambia*/
+img {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    margin-top: -40%;
+}
+
+/* La zona de cabecera estará alineada a la izquierda con un espacio de un 3% a su alrededor*/
+header {
+    float: left;
+    width: 100%;
+    /* Utilizamos el % para que el márgen se establezca en relación con el tamaño de la página*/
+    padding: 3%;
+}
+
+/* El nombre del museo estará en azul, alineado en el centro, con fuente Lucida console o en su defecto serif, si el navegador
+    no dispusiera de la primera fuente, y en negrita*/
+h1 {
+    color: midnightblue;
+    /* Alineamos el texto a la izquierda para que en la vista de impresión se vea el título bien*/
+    text-align: center;
+    font-family: "Lucida console", serif;
+    /* Utilizamos el % para que el texto se escale según el tamaño de la pantalla*/
+    font-size: 200%;
+    font-weight: bold;
+}
+
+/* Ocultamos el menu superior ya que no es necesario imprimirlo */
+#menusup {
+    display:none;
+}
+
+.logotipo {
+    margin-top: -15%;
+    margin-bottom: -5%;
+    margin-left: -12%;
+    float: left;
+    width: 15%;
+    height: 10%;
+}
+
+/* Los pies de foto de las obras estarán alineados al centro, con color de fuente negro y en negrita,
+    con un ancho y un tamaño al 100% y determinado margen inferior*/
+.pie_foto {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 100%;
+    margin-bottom: 10%;
+    margin-top: -10%;
+    width: 100%;
+    position: absolute;
+}
+
+/* El menu de los enlaces lo ocultamos */
+.enlaces {
+    display: none;
+}
+
+
+/* Para el contenido de los html vinculados a las obras, usamos la fuente serif para el texto, debido a su mayor claridad, permitiendo 
+leer el texto más facilmente */
+.Contenido{
+    float: right;
+    width: 100%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    font: serif;
+}
+
+/* Imagen de la obra: con ancho 100%, fondo blanco, un determinado margen superior para separarla del título
+    y alineada a la izquierda*/
+.img_obra{
+
+    float: left;
+    background-color: white;
+    width: 100%;
+    margin-top: 5%; 
+}
+
+/* Ocultamos el footer ya que no es necesario imprimirlo */
+footer {
+    display: none;
+}
+
+/* Ocultamos el botón de comentarios*/
+button {
+    display: none;
+}
+
+/* Ocultamos el panel de comentarios */
+#panelComentarios {
+    display:none;
+}
+
+/* Establecemos la descripción de la obra en dos columnas*/
+.dos_columnas {
+    column-count: 2;
+    margin-top: 40%;
+}
+
+/* Ocultamos la galería para imprimir la obra*/
+.galera, .obras_galeria {
+    display: none;
+}
+
+/* Ocultamos los botones de las redes sociales y la impresión*/
+.social {
+    display: none;
+}
+
+/* Mostramos las colecciones como un contenedor de tamaño flexible, 
+    expandiendo sus elementos para rellenar el espacio libre o comprimiéndolos para evitar que rebasen el área prevista. 
+    Además le añadimos un margen inferior y un ancho mínimo de un 60%*/
+.bloque_colecciones {
+    display: flex;
+    margin-bottom: 2%;
+    min-width: 60%;
+}
+
+/* El título de la colección dispondrá de un margen lateral izquierdo y derecho determinado*/
+#titulo_coleccion{
+    margin-right: 150px;
+    margin-left: 50px;
+}
