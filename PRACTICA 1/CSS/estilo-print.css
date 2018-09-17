@@ -1,0 +1,97 @@
+
+/* Fichero css adicional, contiene los mismos elementos que el original, pero omitimos aquellos que no deseamos mostrar
+en la impresión usando display:none dentro de dicho elemento */
+
+/* Tamaño de fuente predeterminado para que se vea bien en todos los navegadores*/
+body {
+    font-size: 100%;
+    margin-left: 50px;
+}
+/* Para escalar las imágenes si el tamaño del navegador cambia*/
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* La zona de cabecera estará alineada a la izquierda con un espacio de un 3% a su alrededor*/
+header {
+    float: left;
+    width: 100%;
+    /* Utilizamos el % para que el márgen se establezca en relación con el tamaño de la página*/
+    padding: 3%;
+}
+
+/* El nombre del museo estará en azul, alineado en el centro, con fuente Lucida console o en su defecto serif, si el navegador
+    no dispusiera de la primera fuente, y en negrita*/
+h1 {
+    color: midnightblue;
+    /* Alineamos el texto a la izquierda para que en la vista de impresión se vea el título bien*/
+    text-align: left;
+    font-family: "Lucida console", serif;
+    /* Utilizamos el % para que el texto se escale según el tamaño de la pantalla*/
+    font-size: 300%;
+    font-weight: bold;
+}
+
+/* Ocultamos el menu superior ya que no es necesario imprimirlo */
+.menusup {
+    display:none;
+}
+
+.titulosup{
+    font-size: 200%;
+}
+
+/* Al imprimir el documento, el logo se cambia de la esquina izquierda a la derecha (cambiando la alineación) */
+.logotipo {
+    position: relative;
+    margin-top: -13%;
+    margin-bottom: -5%;
+    float: right;
+    width: 14%;
+    text-align: center;
+}
+
+/* Los pies de foto de las obras estarán alineados al centro, con color de fuente negro y en negrita,
+    con un ancho y un tamaño al 100% y determinado margen inferior*/
+.pie_foto {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 100%;
+    margin-bottom: 10%;
+    width: 100%;
+}
+
+/* El menu de los enlaces lo ocultamos */
+.enlaces {
+    display: none;
+}
+
+
+/* Para el contenido de los html vinculados a las obras, usamos la fuente serif para el texto, debido a su mayor claridad, permitiendo 
+leer el texto más facilmente */
+.Contenido{
+    float: right;
+    width: 100%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    font: serif;
+}
+
+/* Imagen de la obra: alineada a la derecha y con un ancho del 40%. Dejando un ligero margen hacia arriba y la derecha
+para separarlo del texto.
+*/
+.img_obra{
+    float: right;
+    background-color: white;
+    width: 40%;
+    margin-top: 50px; 
+    /* Mayor separación entre la foto y el texto de la izquierda*/
+    margin-left: 30px;
+}
+
+/* Ocultamos el footer ya que no es necesario imprimirlo */
+footer {
+    display: none;
+}

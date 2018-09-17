@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <!-- Cabecera de la página -->
+    <head>
+        <!-- Título de la página -->
+        <title>Museo Arqueológico Subacuático</title>
+        <!-- Codificación del texto -->
+        <meta charset="UTF-8">
+        <!-- Para escalar el tamaño de la página según la resolución -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Indicamos la ruta donde se encuentra el fichero CSS correspondiente al estilo de la portada -->
+        <link rel="stylesheet" type="text/css" href="CSS/estilo-obras-portada.css" />
+    </head>
+    
+    <!-- Contenido de la página -->
+    <body>
+        <!-- Encapsulamos la página completa para que al cambiar el tamaño de ventana o al aplicar zoom se aplique a toda la página
+            en vez de a cada elemento por separado.-->
+        <div id="pagina">
+            <!-- Contenido de la zona de cabecera -->
+            <header>
+                <!-- Título de la portada -->
+                <h1>Museo Arqueológico Subacuático</h1>
+                <!-- Logotipo del museo -->
+                <img class="logotipo" src="Imagenes/logotipo.png" alt="Logotipo" >
+                <!-- Menú de navegación -->
+                <nav>
+                    <!-- Esta opción nos dirige a la portada -->
+                    <a href="portada.html">Inicio</a>
+                    <a href="#">Menu 2</a>
+                    <a href="#">Menu 3</a>
+                </nav>
+            </header>
+
+            <!-- Contenido de la zona principal -->
+            <div class="bloque_obras">
+                
+                <!-- Encapsulamos todas las obras en una misma clase para aplicarles a todas el mismo estilo -->
+                <!-- Si hacemos click sobre cualquiera de ellas se nos redirigirá hacia su correspondiente página de obra -->
+                <div class="obras">
+                    <!-- Enlace a la correspondiente página html de la obra -->
+                    <a href="Obras/obra1.html">
+                        <!-- Ruta para cargar la imagen de la obra-->
+                        <img src="Imagenes/obra1.jpg" alt="Obra 1">
+                        <!-- Los pie de foto también están encapsulados todos en la misma clase para aplicarles el mismo estilo -->
+                        <div class="pie_foto">Restos prehispánicos en el Cenote San Manuel</div>
+                    </a>
+                </div>
+                
+                <div class="obras">
+                    <a href="Obras/obra2.html">
+                        <img src="Imagenes/obra2.jpg" alt="Obra 2">
+                        <div class="pie_foto">La Ciudad de Samabaj</div>
+                    </a>
+                </div>
+                
+                <div class="obras">
+                    <a href="Obras/obra3.html">
+                        <img src="Imagenes/obra3.jpg" alt="Obra 3">
+                        <div class="pie_foto">Un barco bizantino en el Mar Negro</div>
+                    </a>
+                </div>
+                
+                <div class="obras">
+                    <a href="Obras/obra4.html">
+                        <img src="Imagenes/obra4.jpg" alt="Obra 4">
+                        <div class="pie_foto">Neápolis, una ciudad romana sumergida</div>
+                    </a>
+                </div>
+                
+                <div class="obras">
+                    <a href="Obras/obra5.html" >
+                        <img src="Imagenes/obra5.JPG" alt="Obra 5">
+                        <div class="pie_foto">Un pecio romano del primer siglo</div>
+                    </a>
+                </div>
+                
+                <div class="obras">
+                    <a href="Obras/obra6.html">
+                        <img src="Imagenes/obra6.jpg" alt="Obra 6">
+                        <div class="pie_foto">El barco fenicio de Mazarrón</div>
+                    </a>
+                </div>
+                
+                <div class="obras">
+                    <a href="Obras/obra7.html" >
+                        <img src="Imagenes/obra7.jpg" alt="Obra 7">
+                        <div class="pie_foto">El hundimiento del crucero Zhiyuan</div>
+                    </a>
+                </div>
+                
+                <div class="obras">
+                    <a href="Obras/obra8.html" >
+                        <img src="Imagenes/obra8.png" alt="Obra 8">
+                        <div class="pie_foto">El cañón de la "Mercedes"</div>
+                    </a>
+                </div>
+                
+                <div class="obras">
+                    <a href="Obras/obra9.html">
+                        <img src="Imagenes/obra9.jpg" alt="Obra 9">
+                        <div class="pie_foto">El mecanismo de la Antikythera</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contenido de la zona auxiliar -->
+            <!-- En él se recogen distintos enlaces hacia páginas relacionadas con el tema de nuestro museo, tales como las páginas oficiales de algunos museos arqueológicos subacuáticos -->
+            <div class="enlaces">
+                <p><a href="http://www.mecd.gob.es/mnarqua/home.html;jsessionid=D7E2D33E0DEE15BFD91F49F3E8249A49" target="_blank">Museo Arqueológico Subacuático de Cartagena (Murcia)</a></p>
+                <p><a href="http://www.unesco.org/new/es/culture/themes/underwater-cultural-heritage/museums-and-tourism/alexandria-museum-project/" target="_blank">Proyecto de Museo Subacuático en Alejandría</a></p>
+                <p><a href="http://www.iaph.es/web/canales/arqueologia-subacuatica/" target="_blank">Arqueología Subacuática Junta de Andalucía</a></p>
+                <p><a href="http://www.um.es/cepoat/mazarronfenicio/?page_id=121" target="_blank">La Escuela de Arqueología Subacuática</a></p>
+            </div>
+
+            <!-- Contenido del pie de página -->
+            <footer>
+                <!-- Nuestros nombres -->
+                <p>Propietarios: José Bolivar y Lidia Sánchez</p>
+                <!-- Contacto: nuestros emails -->
+                <p>Contacto: lidiasm96@correo.ugr.es y brolivars@gmail.com</p>
+                <!-- Nota de copyright -->
+                <p>Copyright © 2018</p>
+            </footer>
+        </div>
+        
+    </body>
+</html>
